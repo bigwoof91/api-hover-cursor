@@ -1,4 +1,4 @@
-export function init() {
+function init() {
 	if (window.Event) {
 	document.captureEvents(Event.MOUSEMOVE);
 	}
@@ -29,4 +29,8 @@ function getCursorX(e) {
   return (window.Event) 
     ? e.pageX 
       : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+}
+
+module.exports = {
+  init
 }

@@ -1,5 +1,5 @@
-var init = require('./src/lib/cursor.js');
+var cursor = require('./src/lib/cursor.js');
 
 module.exports = {
-  printXY: init
+  log: cursor.init
 }
