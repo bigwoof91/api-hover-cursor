@@ -30,7 +30,3 @@ function getCursorX(e) {
     ? e.pageX 
       : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
 }
-
-module.exports = {
-  init
-};
