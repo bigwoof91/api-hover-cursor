@@ -1,0 +1,19 @@
+{
+  "name": "api-hover-cursor",
+  "version": "0.0.1",
+  "description": "Track the cursor position relative to the window",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigwoof91/api-hover-cursor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigwoof91/api-hover-cursor/issues"
+  },
+  "homepage": "https://github.com/bigwoof91/api-hover-cursor#readme"
+}
