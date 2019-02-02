@@ -1,6 +1,6 @@
 {
   "name": "api-hover-cursor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Track the cursor position relative to the window",
   "main": "index.js",
   "scripts": {
