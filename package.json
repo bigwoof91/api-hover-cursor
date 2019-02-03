@@ -1,5 +1,5 @@
 {
-  "name": "api-hover-cursor",
+  "name": "@huvver/track-cursor",
   "version": "0.0.4",
   "description": "Track the cursor position relative to the window",
   "main": "index.js",
