@@ -1,5 +1,5 @@
 function getCursorXY(log = false) {
-	if (window.Event) {
+	if (window.Event) { // for old browsers; https://developer.mozilla.org/en-US/docs/Web/API/Window/captureEvents
 	document.captureEvents(Event.MOUSEMOVE);
 	}
 	document.onmousemove = (e) => getCoordinates(e, log);
@@ -20,6 +20,7 @@ function getCoordinates(e, log = false) {
 }
 
 function getCursorY(e) {
+  console.log(event)
   return (window.Event) 
     ? e.pageY
       : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
