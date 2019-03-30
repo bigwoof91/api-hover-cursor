@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/bigwoof91/api-hover-cursor/issues"
   },
-  "homepage": "https://github.com/bigwoof91/api-hover-cursor#readme"
+  "homepage": "https://github.com/bigwoof91/api-hover-cursor#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0"
+  }
 }
