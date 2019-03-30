@@ -1,6 +1,6 @@
 {
   "name": "@huvver/track-cursor",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Track the cursor position relative to the window",
   "main": "index.js",
   "scripts": {
