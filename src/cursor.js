@@ -6,7 +6,7 @@ function getCursorXY(log = false) {
 };
 
 function logXY({ x, y }) {
-  console.log(`positionX: ${x}, positionY: ${y}`);
+  console.log('X:', x, 'Y:', y);
 };
 
 function getCoordinates(e, doLog = false) {
