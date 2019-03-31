@@ -7,7 +7,7 @@ function getCursorXY(log = false) {
 
 function logXY({ x, y }) {
   console.log(`positionX: ${x}, positionY: ${y}`);
-}
+};
 
 function getCoordinates(e, doLog = false) {
   var y = getCursorY(e);
@@ -16,17 +16,19 @@ function getCoordinates(e, doLog = false) {
   return { x, y, }
 };
 
-function getCursorY(e) {
-  (window.Event) ?
-  e.pageY :
-  event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-}
-
 function getCursorX(e) {
   (window.Event) ?
-  e.pageX :
-  event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-}
+    e.pageX :
+    event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+};
+
+function getCursorY(e) {
+  (window.Event) ?
+    e.pageY :
+    event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+};
+
+
 
 module.exports = {
   getCursorXY

@@ -1,5 +1,5 @@
-var cursor = require('./lib/Cursor.js');
+var cursor = require('./lib/cursor.js');
 
 module.exports = {
-  getCursorPosition: cursor.getCursorXY
-}
+  trackCursor: cursor.getCursorXY
+};
