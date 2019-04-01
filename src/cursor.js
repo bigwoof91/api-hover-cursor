@@ -1,29 +1,20 @@
 const post = require('./post.js');
 
-function getCursorXY(log = false, track = false) {
+function getCursorXY(track = false, log = false) {
   if (window.Event) { // for old browsers; https://developer.mozilla.org/en-US/docs/Web/API/Window/captureEvents
     document.captureEvents(Event.MOUSEMOVE);
   }
-  document.onmousemove = event => getCoordinates(event, log, track);
+  document.onmousemove = event => getCoordinates(event, track, log);
 };
 
-function logXY(x, y) {
-  console.log('X:', x, 'Y:', y);
-};
+function getCoordinates(e, doTrack = false, doLog = false) {
+  const x = getCursorX(e);
+  const y = getCursorY(e);
 
-function getCoordinates(e, doLog = false, doTrack = false) {
-  const y_coordinates = getCursorY(e);
-  const x_coordinates = getCursorX(e);
-  const payload = {
-    coordinates: [{x, y}],
-    x_coordinates,
-    y_coordinates,
-  };
+  if (doLog) logXY(x, y);
+  if (doTrack) post.cursorPosition(x, y);
 
-  if (doLog) logXY(x_coordinates, y_coordinates);
-  if (doTrack) post.cursorPosition(payload);
-
-  return { x_coordinates, y_coordinates }
+  return { x, y }
 };
 
 function getCursorX(e) {
@@ -38,7 +29,9 @@ function getCursorY(e) {
     event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
 };
 
-
+function logXY(x, y) {
+  console.log('X:', x, 'Y:', y);
+};
 
 module.exports = {
   getCursorXY
